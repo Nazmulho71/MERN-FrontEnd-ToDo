@@ -14,7 +14,7 @@ function App() {
 
     let config = {
       method: "post",
-      url: "https://mern-todo-backend.onrender.com/api/todos",
+      url: `${process.env.BASE_API_URL}/api/todos`,
       headers: { "Content-Type": "application/json" },
       data,
     };
@@ -32,7 +32,7 @@ function App() {
 
     let config = {
       method: "put",
-      url: `https://mern-todo-backend.onrender.com/api/todos/${id}`,
+      url: `${process.env.BASE_API_URL}/api/todos/${id}`,
       headers: {
         "Content-Type": "application/json",
       },
@@ -42,7 +42,7 @@ function App() {
     axios(config)
       .then((res) => {
         axios
-          .get("https://mern-todo-backend.onrender.com/api/todos")
+          .get(`${process.env.BASE_API_URL}/api/todos`)
           .then((res) => {
             setTodos(res.data);
           })
@@ -61,7 +61,7 @@ function App() {
 
     let config = {
       method: "delete",
-      url: `https://mern-todo-backend.onrender.com/api/todos/${id}`,
+      url: `${process.env.BASE_API_URL}/api/todos/${id}`,
       headers: {},
     };
 
@@ -73,7 +73,7 @@ function App() {
   useEffect(() => {
     let config = {
       method: "get",
-      url: "https://mern-todo-backend.onrender.com/api/todos",
+      url: `${process.env.BASE_API_URL}/api/todos`,
       headers: {},
     };
 
