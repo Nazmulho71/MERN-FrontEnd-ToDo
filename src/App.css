@@ -1,0 +1,36 @@
+.app {
+  width: 100%;
+  margin: auto;
+  padding: 40px;
+}
+
+.app > div:first-child {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.app > div > .input {
+  width: 100%;
+  margin-right: 20px;
+}
+
+.app__task {
+  display: flex;
+  align-items: center;
+}
+
+.app__task > .check {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.app__task > .pencil {
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.app__task > .delete {
+  margin-left: 10px;
+  cursor: pointer;
+}
